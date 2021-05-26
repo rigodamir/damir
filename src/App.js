@@ -1,25 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import LogInScreen from './screens/LogInScreen';
+import HomeScreen from './screens/HomeScreen';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const user = localStorage.getItem('user');
+  if(user){
+    return(
+      <HomeScreen user={user}/>
+    )
+  }
+  else{
+    return (
+      <LogInScreen/>
+    );
+  }
 }
 
 export default App;

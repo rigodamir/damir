@@ -1,0 +1,13 @@
+.homeScreen{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    text-align: center;
+}
+
+.homescreen-logout{
+    margin-top: 20px;
+    padding: 10px 30px;
+}
